@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Talenka – Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    :root {
+      --main-color: #d97a59;
+      --accent-color: #f4e3d7;
+      --text-color: #2c2c2c;
+      --light-text: #555;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: var(--accent-color);
+      color: var(--text-color);
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    nav {
+      margin-bottom: 2rem;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      color: var(--text-color);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: var(--main-color);
+    }
+
+    h1 {
+      font-size: 3rem;
+      color: var(--main-color);
+    }
+
+    p.bio {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      color: var(--light-text);
+      max-width: 600px;
+    }
+
+    a.button {
+      margin-top: 2rem;
+      text-decoration: none;
+      background-color: var(--main-color);
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 1.5rem;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    a.button:hover {
+      background-color: #c46040;
+    }
+
+    section {
+      max-width: 900px;
+      margin-top: 3rem;
+      text-align: center;
+    }
+
+    section h2 {
+      color: var(--main-color);
+      margin-bottom: 1rem;
+    }
+
+    /* Sklep */
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .product {
+      background: white;
+      border-radius: 1rem;
+      padding: 1rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .product img {
+      max-width: 100%;
+      border-radius: 0.5rem;
+    }
+
+    .product h3 {
+      margin: 0.8rem 0 0.3rem;
+    }
+
+    .product p {
+      color: var(--main-color);
+      font-weight: bold;
+    }
+
+    .faq-item {
+      margin: 1rem 0;
+      text-align: left;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .faq-question {
+      cursor: pointer;
+      font-weight: bold;
+      padding: 1rem;
+      background-color: #fff;
+      border-radius: 1rem;
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      padding: 0 1rem;
+      color: var(--light-text);
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 200px;
+      padding: 1rem;
+    }
+
+    /* Kontakt */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 2rem;
+      text-align: left;
+    }
+
+    input, textarea {
+      padding: 0.8rem;
+      border-radius: 0.5rem;
+      border: 1px solid #ccc;
+      width: 100%;
+    }
+
+    button {
+      align-self: flex-start;
+      background-color: var(--main-color);
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 1.5rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #c46040;
+    }
+
+    /* Stopka */
+    footer {
+      margin-top: 4rem;
+      font-size: 0.9rem;
+      color: var(--light-text);
+      text-align: center;
+    }
+
+    .social-icons {
+      margin-top: 1rem;
+    }
+
+    .social-icons a {
+      color: var(--light-text);
+      font-size: 1.5rem;
+      margin: 0 0.5rem;
+      transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: var(--main-color);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Talenka</h1>
+    <nav>
+      <a href="#sklep">Sklep</a>
+      <a href="#faq">FAQ</a>
+      <a href="#o-mnie">O mnie</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <p class="bio">
+      Jak ktoś jest do wszystkiego, to jest do niczego – a ja jestem wyjątkiem od reguły. <br/>
+      Tworzę cosplay, szyję, projektuję, kocham uczyć się nowych rzeczy i tworzyć ładne.
+    </p>
+    <a href="https://www.instagram.com/talenkaa" target="_blank" class="button">Zobacz na Instagramie</a>
+  </header>
+
+  <section id="sklep">
+    <h2>Sklep</h2>
+    <div class="products">
+      <div class="product">
+        <img src="https://via.placeholder.com/300x200" alt="Produkt 1">
+        <h3>Opaska cosplay</h3>
+        <p>45 zł</p>
+        <a href="#" class="button">Kup</a>
+      </div>
+      <div class="product">
+        <img src="https://via.placeholder.com/300x200" alt="Produkt 2">
+        <h3>Kokarda handmade</h3>
+        <p>30 zł</p>
+        <a href="#" class="button">Kup</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <h2>FAQ</h2>
+    <div class="faq-item">
+      <div class="faq-question">Czy wykonujesz cosplaye na zamówienie?</div>
+      <div class="faq-answer">Tak, ale zależnie od terminu i projektu. Skontaktuj się wcześniej :)</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Czy wysyłasz za granicę?</div>
+      <div class="faq-answer">Tak, ale koszt wysyłki zależy od kraju. Napisz do mnie, a podam szczegóły.</div>
+    </div>
+  </section>
+
+  <section id="o-mnie">
+    <h2>O mnie</h2>
+    <p>Cześć! Jestem Talenka – kreatywna dusza z zamiłowaniem do szycia, cosplayu i estetycznych projektów. Kocham łączyć różne formy rękodzieła i uczyć się nowych rzeczy, żeby tworzyć coś wyjątkowego.</p>
+  </section>
+
+  <section id="kontakt">
+    <h2>Kontakt</h2>
+    <p>Masz pytanie lub chcesz się odezwać? Wypełnij formularz poniżej albo napisz do mnie na Instagramie.</p>
+    <form>
+      <input type="text" name="name" placeholder="Twoje imię" required>
+      <input type="email" name="email" placeholder="Twój email" required>
+      <textarea name="message" rows="5" placeholder="Twoja wiadomość..." required></textarea>
+      <button type="submit">Wyślij</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 Talenka. Wszystkie prawa zastrzeżone.
+    <div class="social-icons">
+      <a href="https://www.instagram.com/talenkaa" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+  </footer>
+
+  <script>
+    // Akordeon FAQ
+    document.querySelectorAll('.faq-question').forEach(q => {
+      q.addEventListener('click', () => {
+        const item = q.parentElement;
+        item.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
+</html>
