@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Talenka – Portfolio</title>
+  <style>
+    :root {
+      --main-color: #d97a59; /* Rudy */
+      --accent-color: #f4e3d7; /* Jasny beż */
+      --text-color: #2c2c2c;
+      --light-text: #555;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    body {
+      background-color: var(--accent-color);
+      color: var(--text-color);
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    h1 {
+      font-size: 3rem;
+      color: var(--main-color);
+    }
+    p.bio {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      color: var(--light-text);
+      max-width: 600px;
+    }
+    a.button {
+      margin-top: 2rem;
+      text-decoration: none;
+      background-color: var(--main-color);
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 1.5rem;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    a.button:hover {
+      background-color: #c46040;
+    }
+    footer {
+      margin-top: 4rem;
+      font-size: 0.9rem;
+      color: var(--light-text);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Talenka</h1>
+    <p class="bio">
+      Jak ktoś jest do wszystkiego, to jest do niczego – a ja jestem wyjątkiem od reguły. <br/>
+      Tworzę cosplay, szyję, projektuję, kocham uczyć się nowych rzeczy i tworzyć ładne.
+    </p>
+    <a href="https://www.instagram.com/talenkaa" target="_blank" class="button">Zobacz na Instagramie</a>
+  </header>
+
+  <footer>
+    &copy; 2025 Talenka. Wszystkie prawa zastrzeżone.
+  </footer>
+</body>
+</html>
